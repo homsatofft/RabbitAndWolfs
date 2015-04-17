@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Заяц и волки</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src="scripts/jquery-1.11.1.js"></script>
+    <script src="scripts/knockout-3.3.0.js"></script>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/resources.js"></script>
+    <script src="scripts/controller.js"></script>
+    <script src="scripts/queue.js"></script>
+    <script src="scripts/copy.js"></script>
+    <script src="scripts/game.js"></script>
+    <script src="scripts/heuristic.js"></script>
+    <script src="scripts/minmax.js"></script>
+    <script src="scripts/state.js"></script>
+    <script src="scripts/board.js"></script>
+</head>
+<body>
+<div id="board" class="board"></div>
+<div id="controller">
+    <div class="controller">
+        <div class="controllerOption">
+            <label>Игрок:</label>
+            <select data-bind="options: pcOptions, value: pcOption, enable: gameOver"></select>
+        </div>
+        <div class="controllerOption">
+            <label>Уровень сложности:</label>
+            <select data-bind="options: aiLevelOptions, value:aiLevel, enable: gameOver"></select>
+        </div>
+        <div class="controllerOption">
+            <label>Отладка:</label>
+            <input type="checkbox" data-bind="checked: debug, enable: gameOver"></select>
+        </div>
+        <div class="info">
+            <span data-bind="text:info, css: cssClass"></span>
+        </div>
+        <div class="button">
+            <button style="" data-bind="click: startGame, enable:gameOver"><span
+                    data-bind="text:startButtonText"></span>
+            </button>
+            <button style="" data-bind="click: abortGame, disable:gameOver"><span
+                    data-bind="text:stopButtonText"></span>
+            </button>
+        </div>
+    </div>
+    <div data-bind="visible: debug">
+        <textarea rows="5" id="debug" style="width: 640px" disabled="disabled"></textarea>
+    </div>
+</div>
+</body>
+</html>

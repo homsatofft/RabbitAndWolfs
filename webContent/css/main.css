@@ -1,0 +1,96 @@
+.board {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 640px;
+    height: 640px;
+    border-left: 1px solid #0D3349;
+    border-top: 1px solid #0D3349;
+    box-shadow: 5px 5px 3px #0D3349;
+}
+
+.controller {
+    float: left;
+    width: 220px;
+    height: 120px;
+    border: 1px dashed black;
+    border-radius: 5px;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+.peg {
+    width: 0px;
+    height: 0px;
+    margin: 0px;
+    background-color: inherit;
+}
+
+.white {
+    background-color: white;
+    border-color: white;
+}
+
+.black {
+    background-color: darkgray;
+    border-color: darkgray;
+}
+
+.wolf {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    background-color: #646464;
+    border: solid 1px black;
+    box-shadow: 3px 3px 2px #454545;
+    border-radius: 50%;
+}
+
+.rabbit {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    border: solid 1px black;
+    box-shadow: 3px 3px 2px #454545;
+}
+
+.selected {
+    box-shadow: 7px 7px 3px #454545;
+}
+
+.controllerOption {
+    margin: 5px;
+}
+
+.controllerOption label {
+    font-weight: bold;
+}
+
+.controllerOption select, input {
+    float: right;
+}
+
+.info {
+    text-align: center;
+    font-weight: bold;
+    height: 23px;
+}
+
+.gameOver {
+    color: red;
+}
+
+.gameRunning {
+    color: green;
+}
+
+.button {
+    margin: 2px;
+    text-align: justify;
+}
